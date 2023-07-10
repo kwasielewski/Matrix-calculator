@@ -1,0 +1,44 @@
+1. Temat pracy - interpreter lub generator kodu dla obliczeń macierzowych
+2. Poszukiwanie inspiracji
+  a. wstępny pomysł o trwałych strukturach danych
+  b. dygresja o Julii
+  c. algebra liniowa
+  d. FFTW i Źi, MP i interpretery
+3. Języki
+  a. generowanie/interpretacja do OCamla - w jednym miejscu, ale nie do końca czuć moc przy obliczeniach
+  b. generowanie do Julii - proste składniki typu @ to mnożenie macierzy, ale głównie praca własna tj. nie ma takiego projektu
+  c. generowanie do C - dużo pomocy, ale sporo na piechotę
+4. Techniki
+  a. OCamllex i Menhir  
+  b. podstwawowy typ obliczeń to Matrix n m i Vector n
+  c. żeby generować asymptotycznie dobry kod trzeba mieć specjalne typy np. Toeplitz n m
+    i relację Toeplitz n m <: Matrix n m
+    oraz int to float np. dla macierzy tu
+
+  d. zabawa ast
+
+czy chcę dodać bigint i bigfloat?
+=============================
+konwencje leksykalne
+* funkcje i konstruktory : afdnfus(sgsgsdx)
+* same macierze [1 2 3 ; 45 6 6;]
+* operatory + - * 
+* operatory z kropeczką (fajne)
+* infixowe formy funkcji
+* specjalny keyword ans
+* print???
+* być może lety i inputy
+* dyrektywy do generatora
+składnia
+bardzo prosta
+lista obliczeń
+
+mechanizm checkpointów
+
+typechecker ma proste zadanie: sprawdzić wymiary i podtypować
+
+generator: 
+dba o includy (fftw), używa nagminnie funkcji moich "bibliotecznych"
+
+
+REPL z backendami???

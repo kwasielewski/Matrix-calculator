@@ -1,0 +1,10 @@
+ocamlc ast.ml
+menhir --infer parser.mly
+ocamllex lekser.mll
+ocamlc parser.mli
+ocamlc ast.ml parser.ml
+ocamlc lekser.ml
+ocamlc ast.ml parser.ml lekser.ml types.ml typechecker.ml generator.ml main.ml
+
+wc -l ast.ml generator.ml lekser.mll main.ml parser.mly typechecker.ml types.ml generator.ml
+

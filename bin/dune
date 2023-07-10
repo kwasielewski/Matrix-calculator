@@ -1,0 +1,13 @@
+(executable
+ (public_name linalg)
+ (name main)
+ (libraries linalg))
+
+(env
+    (dev
+        (flags (:standard -g -w -39-33-26-27))
+    )
+    (release
+        (flags (:standard -w -39-33-26-27))
+    )
+)
